@@ -7,7 +7,7 @@
      "client": "cd client && npm i && npm run build",
     "server": "cd server && npm i && npm run start",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "dev-client": "cd client && yarn dev",
+    "dev-client": "cd client && npm start",
     "dev-server": "cd server && npm run start",
     "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\""
   },

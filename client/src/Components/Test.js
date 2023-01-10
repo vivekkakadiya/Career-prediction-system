@@ -37,8 +37,9 @@ export default function Main() {
   const [wt, setwt] = useState("");
   const [wit, setwit] = useState();
   const [int, setint] = useState();
-
+  
   let handleSubmit = async (e) => {
+    console.log(rw);
     e.preventDefault();
     try {
       let res = await fetch("http://localhost:8080/api/form", {
@@ -77,7 +78,7 @@ export default function Main() {
           30: int,
         }),
       });
-      console.log(res);
+      console.log(rw);
     } catch (err) {
       console.log(err.message);
     }
@@ -92,7 +93,7 @@ export default function Main() {
             width="33"
             height="33"
             fill="currentColor"
-            class="bi bi-house-door"
+            className="bi bi-house-door"
             viewBox="0 0 16 16"
           >
             <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
@@ -105,7 +106,7 @@ export default function Main() {
             width="33"
             height="33"
             fill="currentColor"
-            class="bi bi-chat"
+            className="bi bi-chat"
             viewBox="0 0 16 16"
           >
             <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
@@ -116,7 +117,7 @@ export default function Main() {
             width="33"
             height="33"
             fill="currentColor"
-            class="bi bi-person-circle"
+            className="bi bi-person-circle"
             viewBox="0 0 16 16"
           >
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -329,15 +330,15 @@ export default function Main() {
               required
               onChange={(e) => setcerti(e.target.value)}
             >
-              <option value="1">shell programming</option>
-              <option value="2">machine learning</option>
-              <option value="3">app development</option>
-              <option value="4">python</option>
-              <option value="5">r programming</option>
-              <option value="6">information security</option>
-              <option value="7">hadoop</option>
-              <option value="8">distro making</option>
-              <option value="9">full stack</option>
+              <option value="shell programming">shell programming</option>
+              <option value="machine learning">machine learning</option>
+              <option value="app development">app development</option>
+              <option value="python">python</option>
+              <option value="r programming">r programming</option>
+              <option value="information security">information security</option>
+              <option value="hadoop">hadoop</option>
+              <option value="distro making">distro making</option>
+              <option value="full stack<">full stack</option>
             </select>{" "}
             <br /> <br />
             talent tests taken? <br />
@@ -368,9 +369,9 @@ export default function Main() {
               required
               onChange={(e) => setrw(e.target.value)}
             >
-              <option value="1">excellent</option>
-              <option value="2">poor</option>
-              <option value="3">medium</option>
+              <option value="excellent">excellent</option>
+              <option value="poor">poor</option>
+              <option value="medium">medium</option>
             </select>{" "}
             <br /> <br />
             memory capability score <br />
@@ -380,9 +381,9 @@ export default function Main() {
               required
               onChange={(e) => setmc(e.target.value)}
             >
-              <option value="1">excellent</option>
-              <option value="2">poor</option>
-              <option value="3">medium</option>
+              <option value="excellent">excellent</option>
+              <option value="poor">poor</option>
+              <option value="medium">medium</option>
             </select>{" "}
             <br /> <br />
             Interested subjects <br />
@@ -392,16 +393,16 @@ export default function Main() {
               required
               onChange={(e) => setis(e.target.value)}
             >
-              <option value="1">cloud computing</option>
-              <option value="2">networks</option>
-              <option value="3">hacking</option>
-              <option value="4">Computer Architecture</option>
-              <option value="5">programming</option>
-              <option value="6">parallel computing</option>
-              <option value="7">IOT</option>
-              <option value="8">data engineering</option>
-              <option value="9">Software Engineering</option>
-              <option value="10">Management</option>
+              <option value="cloud computing">cloud computing</option>
+              <option value="networks">networks</option>
+              <option value="hacking">hacking</option>
+              <option value="Computer Architecture">Computer Architecture</option>
+              <option value="programming">programming</option>
+              <option value="parallel computing">parallel computing</option>
+              <option value="IOT">IOT</option>
+              <option value="data engineering">data engineering</option>
+              <option value="Software Engineering">Software Engineering</option>
+              <option value="Management">Management</option>
             </select>{" "}
             <br /> <br />
             interested career area <br />
@@ -411,12 +412,12 @@ export default function Main() {
               required
               onChange={(e) => setic(e.target.value)}
             >
-              <option value="1">system developer</option>
-              <option value="2">Business process analyst</option>
-              <option value="3">developer</option>
-              <option value="4">testing</option>
-              <option value="5">security</option>
-              <option value="6">cloud computing</option>
+              <option value="system developer">system developer</option>
+              <option value="Business process analyst">Business process analyst</option>
+              <option value="developer">developer</option>
+              <option value="testing">testing</option>
+              <option value="security">security</option>
+              <option value="cloud computing">cloud computing</option>
             </select>{" "}
             <br /> <br />
             Type of company want to settle in? <br />
@@ -426,16 +427,16 @@ export default function Main() {
               required
               onChange={(e) => settoc(e.target.value)}
             >
-              <option value="1">Web Services</option>
-              <option value="2">SAaS services</option>
-              <option value="3">Sales and Marketing</option>
-              <option value="4">Testing and Maintainance Services</option>
-              <option value="5">product development</option>
-              <option value="6">BPA</option>
-              <option value="7">Service Based</option>
-              <option value="8">Product Based</option>
-              <option value="9">Cloud Services</option>
-              <option value="10">Finance</option>
+              <option value="Web Services">Web Services</option>
+              <option value="SAaS services">SAaS services</option>
+              <option value="Sales and Marketing">Sales and Marketing</option>
+              <option value="Testing and Maintainance Services">Testing and Maintainance Services</option>
+              <option value="product development">product development</option>
+              <option value="BPA">BPA</option>
+              <option value="Service Based">Service Based</option>
+              <option value="Product Based">Product Based</option>
+              <option value="Cloud Services">Cloud Services</option>
+              <option value="Finance">Finance</option>
             </select>{" "}
             <br /> <br />
             Taken inputs from seniors or elders <br />
@@ -487,37 +488,37 @@ export default function Main() {
               required
               onChange={(e) => setib(e.target.value)}
             >
-              <option value="1">Prayer books</option>
-              <option value="2">Childrens</option>
-              <option value="3">Travel</option>
-              <option value="4">Romance</option>
-              <option value="5">Cookbooks</option>
-              <option value="6">Self help</option>
-              <option value="7">Drama</option>
-              <option value="8">Math</option>
-              <option value="9">Religion-Spirituality</option>
-              <option value="10">Anthology</option>
-              <option value="11">Trilogy</option>
-              <option value="12">Autobigraphics</option>
-              <option value="13">Mystery</option>
-              <option value="14">Diaries</option>
-              <option value="15">Journals</option>
-              <option value="16">History</option>
-              <option value="17">Art</option>
-              <option value="18">Dictionaries</option>
-              <option value="19">Horror</option>
-              <option value="20">Encyclopedias</option>
-              <option value="21">Action and Adventure</option>
-              <option value="22">Fantasy</option>
-              <option value="23">Comics</option>
-              <option value="24">Science fiction</option>
-              <option value="25">Series </option>
-              <option value="26">Guide </option>
-              <option value="27">Biographies</option>
-              <option value="28">Health</option>
-              <option value="29">Satire</option>
-              <option value="30">Science</option>
-              <option value="31">Poetry</option>
+              <option value="Prayer books">Prayer books</option>
+              <option value="Childrens">Childrens</option>
+              <option value="Travel">Travel</option>
+              <option value="Romance">Romance</option>
+              <option value="Cookbooks">Cookbooks</option>
+              <option value="Self help">Self help</option>
+              <option value="Drama">Drama</option>
+              <option value="Math">Math</option>
+              <option value="Religion-Spirituality">Religion-Spirituality</option>
+              <option value="Anthology">Anthology</option>
+              <option value="Trilogy">Trilogy</option>
+              <option value="Autobigraphics">Autobigraphics</option>
+              <option value="Mystery">Mystery</option>
+              <option value="Diaries">Diaries</option>
+              <option value="Journals">Journals</option>
+              <option value="History">History</option>
+              <option value="Art">Art</option>
+              <option value="Dictionaries">Dictionaries</option>
+              <option value="Horror">Horror</option>
+              <option value="Encyclopedias">Encyclopedias</option>
+              <option value="Action and Adventure">Action and Adventure</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Comics">Comics</option>
+              <option value="Science fiction">Science fiction</option>
+              <option value="Series">Series </option>
+              <option value="Guide">Guide </option>
+              <option value="Biographies">Biographies</option>
+              <option value="Health">Health</option>
+              <option value="Satire">Satire</option>
+              <option value="Science">Science</option>
+              <option value="Poetry">Poetry</option>
             </select>{" "}
             <br /> <br />
             Gentle or Tough behaviour? <br />
@@ -527,8 +528,8 @@ export default function Main() {
               required
               onChange={(e) => setb(e.target.value)}
             >
-              <option value="1">stubborn</option>
-              <option value="2">Gentle</option>
+              <option value="stubborn">stubborn</option>
+              <option value="Gentle">Gentle</option>
             </select>{" "}
             <br /> <br />
             Management or Technical <br />
@@ -538,8 +539,8 @@ export default function Main() {
               required
               onChange={(e) => setmt(e.target.value)}
             >
-              <option value="1">Management</option>
-              <option value="2">Technical</option>
+              <option value="Management">Management</option>
+              <option value="Technical">Technical</option>
             </select>{" "}
             <br /> <br />
             Hard/Smart worker <br />
@@ -549,8 +550,8 @@ export default function Main() {
               required
               onChange={(e) => setwt(e.target.value)}
             >
-              <option value="1">Hard worker</option>
-              <option value="2">smart worker</option>
+              <option value="Hard worker">Hard worker</option>
+              <option value="smart worker">smart worker</option>
             </select>{" "}
             <br /> <br />
             worked in teams ever? <br />
