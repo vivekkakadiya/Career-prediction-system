@@ -3,8 +3,8 @@ import numpy as np
 from sklearn import decomposition
 import matplotlib.pyplot as plt
 import sys
-
-print(sys.argv[1])
+import json
+print("hello")
 
 dataset = pd.read_csv("roo_data.csv")
 
@@ -79,7 +79,7 @@ from sklearn.metrics import accuracy_score
 # making predictions on the testing set
 y_pred = gnb.predict(X_test)
 
-print("aaa")
+# print("aaa")
 
 dict1={
     0:'2',
@@ -114,54 +114,23 @@ dict1={
     29:'yes',
     30:'no'
 }
-import json
 # dict1={}
-# d1=sys.arvg[1]
-# print(d1)
-
-# dict1=json.loads(d1)
-certi=['shell programming', 'machine learning', 'app development', 'python', 'r programming', 'information security', 'hadoop', 'distro making', 'full stack']
-read=['excellent', 'poor', 'medium']
-memory=['excellent', 'medium', 'poor']
-subject=['cloud computing', 'networks', 'hacking', 'Computer Architecture', 'programming', 'parallel computing', 'IOT', 'data engineering', 'Software Engineering', 'Management']
-area=['system developer', 'Business process analyst', 'developer', 'testing', 'security', 'cloud computing']
-company=['Web Services', 'SAaS services', 'Sales and Marketing', 'Testing and Maintainance Services', 'product development', 'BPA', 'Service Based', 'Product based', 'Cloud Services', 'Finance']
-books=['Prayer books', 'Childrens', 'Travel', 'Romance', 'Cookbooks', 'Self help', 'Drama', 'Math', 'Religion-Spirituality', 
-                           'Anthology', 'Trilogy', 'Autobiographies', 'Mystery', 'Diaries', 'Journals', 'History', 'Art', 'Dictionaries', 'Horror', 
-                           'Encyclopedias', 'Action and Adventure', 'Fantasy', 'Comics', 'Science fiction', 'Series', 'Guide', 'Biographies', 'Health', 'Satire', 'Science', 'Poetry']
-behaviour =['stubborn', 'gentle']
-man=['Management', 'Technical']
-work=['hard worker', 'smart worker']
-
-import random
-a=int(random.randint(0,8))
-dict1["16"]=certi[a]
-a=int(random.randint(0,3))
-dict1["18"]=read[a]
-a=int(random.randint(0,3))
-dict1["19"]=memory[a]
-a=int(random.randint(0,10))
-dict1["20"]=subject[a]
-a=int(random.randint(0,6))
-dict1["21"]=area[a]
-a=int(random.randint(0,10))
-dict1["22"]=company[a]
-a=int(random.randint(0,30))
-dict1["23"]=books[a]
-a=int(random.randint(0,2))
-dict1["26"]=behaviour[a]
-a=int(random.randint(0,2))
-dict1["27"]=man[a]
-a=int(random.randint(0,2))
-dict1["28"]=work[a]
+# print(sys.argv[1])
+json=sys.argv[1]
+# print(json)
+dict1=json.load(json)
+print(dict1)
 
 
+print(dict1.values())
+x=list(dict1.values())
 
 # a1=[]
-
-for i in dict1:
-    a1.append(dict1[i])
-x=np.array(a1)
+# for i in dict1:
+    # a1.append(dict1[i])
+    # print(dict1[i])
+# x=np.array(a1)
+print(x)
 
 tst_data=np.zeros(31)
 tst_data1=np.zeros(14)
@@ -175,8 +144,8 @@ for i in range(0,14):
 tst_data2=tst_data[14:]
 df2 = np.append(np.array([tst_data1]),np.array([tst_data2]),axis=1)
 a=gnb.predict(np.array(df2))
-
+print(a)
 # print(dict1)
-# print(dict[a[0]])
+print(dict[a[0]])
 
 
