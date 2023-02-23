@@ -26,7 +26,6 @@ for i in range(14,31):
 data1=data[:,:14]
 # normalized_data = Normalizer().fit_transform(data1)
 # print(normalized_data.shape)
-# da=0.8383
 # normalized_data
 data2=data_t[:,14:]
 # data2.shape
@@ -74,63 +73,24 @@ X_train, X_test, y_train, y_test = train_test_split(X1, np.ravel(y), test_size=0
 # training the model on training set
 from sklearn.naive_bayes import GaussianNB
 gnb = GaussianNB()
-gnb.fit(X_train, y_train)
+gnb=gnb.fit(X_train, y_train)
 from sklearn.metrics import accuracy_score  
 # making predictions on the testing set
 y_pred = gnb.predict(X_test)
 
-# print("aaa")
-
-dict1={
-    0:'2',
-    1:'56',
-    2:'61',
-    3:'70',
-    4:'20',
-    5:'12',
-    6:'46',
-    7:'69',
-    8:'25',
-    9:'8',
-    10:'2',
-    11:'1',
-    12:'78',
-    13:'80',
-    14:'yes',
-    15:'no',
-    16:'python',
-    17:'yes',
-    18:'excellent',
-    19:'poor',
-    20:'IOT',
-    21:'security',
-    22:'job',
-    23:'Testing and Maintainance Services',
-    24:'yes',
-    25:'no',
-    26:'Travel',
-    27:'gentle',
-    28:'Technical',
-    29:'yes',
-    30:'no'
-}
 # dict1={}
 # print(sys.argv[1])
-json=sys.argv[1]
-# print(json)
-dict1=json.load(json)
-print(dict1)
-
-
-print(dict1.values())
-x=list(dict1.values())
-
-# a1=[]
-# for i in dict1:
-    # a1.append(dict1[i])
-    # print(dict1[i])
-# x=np.array(a1)
-print(x)
+file=sys.argv[1]
+# file=json.dump(file)
+# print(file)
+dict1=json.loads(file)
+# print(type(dict1))
+# dictionary=json.load(json)
+a1=[]
+for i in dict1:
+    a1.append(dict1[i])
+x=np.array(a1)
+# print(x)
 
 tst_data=np.zeros(31)
 tst_data1=np.zeros(14)
