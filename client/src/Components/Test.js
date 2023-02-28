@@ -148,7 +148,7 @@ export default function Main() {
               min="0"
               max="10"
               required
-              value={lq}
+              value={hc}
               onChange={(e) => sethc(e.target.value)}
             />{" "}
             <br /> <br />
