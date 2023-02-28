@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { spawn }=require("child_process");
+const { log } = require("console");
 
 
 var data;
@@ -10,7 +11,7 @@ router.post("/", async (req, res) => {
 
     childpython.stdout.on('data',(data)=>{
         console.log(data.toString());
-});
+        });
 })
 
 

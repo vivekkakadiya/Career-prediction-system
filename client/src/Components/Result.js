@@ -1,10 +1,15 @@
-// import career from '../Image/career.png'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
 import career from '../Image/career.png'
-import './Home.css'
 
-export default function Home() {
-    return (
-        <div className='main'>
+export const Result = ({result}) => {
+    // const [result, setResult] = useState([])
+
+    
+
+  return (
+    <>
+ <div className='main'>
             <div className="nav">
             <div className="nav--upper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
@@ -32,17 +37,15 @@ export default function Home() {
                     
                 </div>
 
-                <h1 className='homeName'>Career Decoders</h1>
-                <span className='tagline'>Flight to a bright career awaits you here</span> 
+                <h1 className='homeName'>Result</h1>
+                <span className='tagline'>{result}</span> 
 
-                <a href="/select">
-                <button type="" className='test_btn'>Start Test</button>
-                </a>
+               
                 
-                <img src={career} alt="" className='career_img'/>
                 
 
             </div>
         </div>
-    )
+    </>
+  )
 }
