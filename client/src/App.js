@@ -12,6 +12,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { Result } from './Components/Result';
 function App() {
   const user = localStorage.getItem('token');
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route exact path="/test"> <Test/> </Route>
           <Route exact path="/select"> <Select/> </Route>
           <Route exact path="/profile"> <Main/> </Route>
+          <Route exact path="/result"> <Result/> </Route>
       </Switch>
       </Router>
     </div>
