@@ -7,32 +7,34 @@ export default function Main() {
   // const handleSubmit = async (e) =>{
   //     history.push("/signin");
   //     console.log(history);
-  const [pos, setpos] = useState("");
-  const [pa, setpa] = useState("");
-  const [pc, setpc] = useState("");
-  const [pse, setpse] = useState("");
-  const [pcn, setpcn] = useState("");
-  const [pes, setpes] = useState("");
-  const [pca, setpca] = useState("");
-  const [pm, setpm] = useState("");
-  const [pcm, setpcm] = useState("");
-  const [nhr, setnhr] = useState("");
+  // const [pos, setpos] = useState("");
+  // const [pa, setpa] = useState("");
+  // const [pc, setpc] = useState("");/
+  // const [pse, setpse] = useState("");
+  // const [pcn, setpcn] = useState("");
+  // const [pes, setpes] = useState("");
+  // const [pca, setpca] = useState("");
+  // const [pm, setpm] = useState("");
+  // const [pcm, setpcm] = useState("");
+  // const [nhr, setnhr] = useState("");
   const [lq, setlq] = useState("");
+  const [hc, sethc] = useState("");
   const [cs, setcs] = useState("");
   const [ps, setps] = useState("");
-  const [lh, setlh] = useState("");
+  // const [lh, setlh] = useState("");
   const [slc, setslc] = useState("");
+  const [ec, setec] = useState("");
   const [certi, setcerti] = useState("");
-  const [tt, settt] = useState("");
+  const [ws, setws] = useState("");
   const [rw, setrw] = useState("");
   const [mc, setmc] = useState("");
   const [is, setis] = useState("");
   const [ic, setic] = useState("");
   const [toc, settoc] = useState("");
   const [soe, setsoe] = useState("");
-  const [ig, setig] = useState("");
+  // const [ig, setig] = useState("");
   const [ib, setib] = useState("");
-  const [b, setb] = useState("");
+  // const [b, setb] = useState("");
   const [mt, setmt] = useState("");
   const [wt, setwt] = useState("");
   const [wit, setwit] = useState();
@@ -46,39 +48,28 @@ export default function Main() {
         headers: { "content-type": "application/json" },
         method: "POST",
         body: JSON.stringify({
-          1: pos,
-          2: pa,
-          3: pc,
-          4: pse,
-          5: pcn,
-          6: pes,
-          7: pca,
-          8: pm,
-          9: pcm,
-          10: nhr,
-          11: lq,
-          12: cs,
-          13: ps,
-          14: lh,
-          15: slc,
-          16: certi,
-          17: tt,
-          18: rw,
-          19: mc,
-          20: is,
-          21: ic,
-          22: toc,
-          23: soe,
-          24: ig,
-          25: ib,
-          26: b,
-          27: mt,
-          28: wt,
-          29: wit,
-          30: int,
+          1: lq,
+          2: hc,
+          3: cs,
+          4: ps,
+          5: slc,
+          6: ec,
+          7: certi,
+          8: ws,
+          9: rw,
+          10: mc,
+          11: is,
+          12: ic,
+          13: toc,
+          14: soe,
+          15: ib,
+          16: mt,
+          17: wt,
+          18: wit,
+          19: int,
         }),
       });
-      console.log(rw);
+      // console.log(rw);
     } catch (err) {
       console.log(err.message);
     }
@@ -139,125 +130,26 @@ export default function Main() {
           //"window.location.href = 'localhost:3000/signin';"
         >
           <div className="testForm">
-            percentage in Operating Systems <br />
-            <input
-              type="number"
-              className="in"
-              value={pos}
-              onChange={(e) => setpos(e.target.value)}
-              min="0"
-              max="100"
-              required
-            />{" "}
-            <br /> <br />
-            Enter Percentage in Algorithm <br />
-            <input
-              type="number"
-              className="in"
-              value={pa}
-              onChange={(e) => setpa(e.target.value)}
-              min="0"
-              max="100"
-              required
-            />{" "}
-            <br /> <br />
-            Enter Percentage in Programming Concepts <br />
-            <input
-              type="number"
-              className="in"
-              value={pc}
-              onChange={(e) => setpc(e.target.value)}
-              min="0"
-              max="100"
-              required
-            />{" "}
-            <br /> <br />
-            Enter Percentage in Software Engineering <br />
-            <input
-              type="number"
-              className="in"
-              value={pse}
-              onChange={(e) => setpse(e.target.value)}
-              min="0"
-              max="100"
-              required
-            />{" "}
-            <br /> <br />
-            Enter Percentage in Computer Networks <br />
+            Logical quotient rating <br />
             <input
               type="number"
               className="in"
               min="0"
-              max="100"
-              value={pcn}
-              onChange={(e) => setpcn(e.target.value)}
-              required
-            />{" "}
-            <br /> <br />
-            Enter Percentage in Electronics Subjects <br />
-            <input
-              type="number"
-              className="in"
-              value={pes}
-              onChange={(e) => setpes(e.target.value)}
-              min="0"
-              max="100"
-              required
-            />{" "}
-            <br /> <br />
-            Enter Percentage in Computer Architecture <br />
-            <input
-              type="number"
-              className="in"
-              value={pca}
-              onChange={(e) => setpca(e.target.value)}
-              min="0"
-              max="100"
-              required
-            />{" "}
-            <br /> <br />
-            Enter Percentage in Mathematics <br />
-            <input
-              type="number"
-              className="in"
-              value={pm}
-              onChange={(e) => setpm(e.target.value)}
-              min="0"
-              max="100"
-              required
-            />{" "}
-            <br /> <br />
-            Enter Percentage in Communication skills <br />
-            <input
-              type="number"
-              className="in"
-              value={pcm}
-              onChange={(e) => setpcm(e.target.value)}
-              min="0"
-              max="100"
-              required
-            />{" "}
-            <br /> <br />
-            Hours working per day <br />
-            <input
-              type="number"
-              className="in"
-              value={nhr}
-              onChange={(e) => setnhr(e.target.value)}
-              min="0"
-              max="24"
-              required
-            />{" "}
-            <br /> <br />
-            Logical quotient rating hackathons <br />
-            <input
-              type="number"
-              className="in"
-              min="0"
-              max=""
+              max="10"
               required
               value={lq}
               onChange={(e) => setlq(e.target.value)}
+            />{" "}
+            <br /> <br />
+            No. of hackathons <br />
+            <input
+              type="number"
+              className="in"
+              min="0"
+              max="10"
+              required
+              value={hc}
+              onChange={(e) => sethc(e.target.value)}
             />{" "}
             <br /> <br />
             coding skills rating <br />
@@ -282,27 +174,7 @@ export default function Main() {
               required
             />{" "}
             <br /> <br />
-            can work long time before system? <br />
-            <input
-              type="radio"
-              name="time"
-              value="yes"
-              onChange={(e) => setlh(e.target.value)}
-              className="radio2"
-              style={{ width: "30px" }}
-              required
-            />{" "}
-            Yes
-            <input
-              type="radio"
-              name="time"
-              value="no"
-              onChange={(e) => setlh(e.target.value)}
-              className="radio2"
-              style={{ width: "30px" }}
-              required
-            />{" "}
-            No <br /> <br />
+  
             self-learning capability? <br />
             <input
               type="radio"
@@ -324,6 +196,29 @@ export default function Main() {
               required
             />{" "}
             No <br /> <br />
+
+            Extra-courses did? <br />
+            <input
+              type="radio"
+              name="talent"
+              className="radio2"
+              value="yes"
+              onChange={(e) => setec(e.target.value)}
+              style={{ width: "30px" }}
+              required
+            />{" "}
+            Yes
+            <input
+              type="radio"
+              name="talent"
+              className="radio2"
+              value="yes"
+              onChange={(e) => setec(e.target.value)}
+              style={{ width: "30px" }}
+              required
+            />{" "}
+            No <br /> <br />
+
             certifications <br />
             <select
               className="dropdown"
@@ -341,27 +236,24 @@ export default function Main() {
               <option value="full stack<">full stack</option>
             </select>{" "}
             <br /> <br />
-            talent tests taken? <br />
-            <input
-              type="radio"
-              name="talent"
-              className="radio2"
-              value="yes"
-              onChange={(e) => settt(e.target.value)}
-              style={{ width: "30px" }}
+
+            Workshops <br />
+            <select
+              className="dropdown"
               required
-            />{" "}
-            Yes
-            <input
-              type="radio"
-              name="talent"
-              className="radio2"
-              value="yes"
-              onChange={(e) => settt(e.target.value)}
-              style={{ width: "30px" }}
-              required
-            />{" "}
-            No <br /> <br />
+              onChange={(e) => setws(e.target.value)}
+            >
+              <option value="testing">testing</option>
+              <option value="database security">database security</option>
+              <option value="game development">game development</option>
+              <option value="data science">data science</option>
+              <option value="system designing">system designing</option>
+              <option value="hacking">hacking</option>
+              <option value="cloud computing">cloud computing</option>
+              <option value="web technologies">web technologies</option>
+            </select>{" "}
+            <br /> <br />
+
             reading and writing skills <br />
             <select
               name=""
@@ -374,6 +266,7 @@ export default function Main() {
               <option value="medium">medium</option>
             </select>{" "}
             <br /> <br />
+
             memory capability score <br />
             <select
               name=""
@@ -460,27 +353,7 @@ export default function Main() {
               required
             />{" "}
             No <br /> <br />
-            interested in games <br />
-            <input
-              type="radio"
-              name="iig"
-              className="radio2"
-              value="yes"
-              onChange={(e) => setig(e.target.value)}
-              style={{ width: "30px" }}
-              required
-            />{" "}
-            Yes
-            <input
-              type="radio"
-              name="iig"
-              className="radio2"
-              value="no"
-              onChange={(e) => setig(e.target.value)}
-              style={{ width: "30px" }}
-              required
-            />{" "}
-            No <br /> <br />
+
             Interested Type of Books <br />
             <select
               name=""
@@ -521,17 +394,7 @@ export default function Main() {
               <option value="Poetry">Poetry</option>
             </select>{" "}
             <br /> <br />
-            Gentle or Tough behaviour? <br />
-            <select
-              name=""
-              className="dropdown"
-              required
-              onChange={(e) => setb(e.target.value)}
-            >
-              <option value="stubborn">stubborn</option>
-              <option value="Gentle">Gentle</option>
-            </select>{" "}
-            <br /> <br />
+            
             Management or Technical <br />
             <select
               name=""
@@ -568,18 +431,18 @@ export default function Main() {
             <input
               type="radio"
               name="workInTeam"
-              values="no"
+              value="no"
               onChange={(e) => setwit(e.target.value)}
               className="radio2"
               style={{ width: "30px" }}
               required
             />{" "}
-            No <br /> <br />
+            no <br /> <br />
             Introvert <br />
             <input
               type="radio"
               name="introvert"
-              values="yes"
+              value="yes"
               onChange={(e) => setint(e.target.value)}
               className="radio2"
               style={{ width: "30px" }}
@@ -589,13 +452,13 @@ export default function Main() {
             <input
               type="radio"
               name="introvert"
-              values="no"
+              value="no"
               onChange={(e) => setint(e.target.value)}
               className="radio2"
               style={{ width: "30px" }}
               required
             />{" "}
-            No <br /> <br />
+            no <br /> <br />
           </div>
 
           {/* <a href="/signin"> */}
