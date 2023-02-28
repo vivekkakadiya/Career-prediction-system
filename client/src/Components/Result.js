@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import career from '../Image/career.png'
 
-export const Result = ({result}) => {
-    // const [result, setResult] = useState([])
-
-    
+export const Result = () => {
+    const [result, setResult] = useState("Computer")
 
   return (
     <>
