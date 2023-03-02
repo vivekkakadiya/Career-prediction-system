@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import career from '../Image/career.png'
 
-export const Result = () => {
-    const [result, setResult] = useState("Computer")
-
+export const Result = ({result}) => {
+    // const [result, setResult] = useState("Computer")
   return (
     <>
  <div className='main'>
@@ -38,9 +37,6 @@ export const Result = () => {
                 <h1 className='homeName'>Result</h1>
                 <span className='tagline'>{result}</span> 
 
-               
-                
-                
 
             </div>
         </div>

@@ -2,6 +2,8 @@ import "./Test.css";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import cors from "cors";
+import { Result } from "./Result";
+
 export default function Main() {
   // let history = useHistory();
   // const handleSubmit = async (e) =>{
@@ -40,6 +42,9 @@ export default function Main() {
   const [wit, setwit] = useState();
   const [int, setint] = useState();
   
+
+  const [result, setResult] = useState("vivek");
+  const [flag, setFlag] = useState(true);
   let handleSubmit = async (e) => {
     console.log(rw);
     e.preventDefault();
@@ -70,13 +75,17 @@ export default function Main() {
         }),
       });
       // console.log(rw);
+      setResult(res);
+      setFlag(false);
     } catch (err) {
       console.log(err.message);
     }
   };
+  
 
   return (
-    <div className="main" style={{ height: "100vh" }}>
+    <>
+   {flag ? <div className="main" style={{ height: "100vh" }}>
       <div className="nav">
         <div className="nav--upper">
           <svg
@@ -467,6 +476,8 @@ export default function Main() {
           {/* </a> */}
         </form>
       </div>
-    </div>
+    </div> : <Result result={result} />}
+    </>
+
   );
 }

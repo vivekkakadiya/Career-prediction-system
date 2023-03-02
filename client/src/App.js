@@ -37,7 +37,7 @@ function App() {
           <Route exact path="/test"> <Test/> </Route>
           <Route exact path="/select"> <Select/> </Route>
           <Route exact path="/profile"> <Main/> </Route>
-          <Route exact path="/result"> <Result/> </Route>
+          {/* <Route exact path="/result"> <Result/> </Route> */}
       </Switch>
       </Router>
     </div>
