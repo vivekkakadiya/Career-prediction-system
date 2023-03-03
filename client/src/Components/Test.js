@@ -43,10 +43,10 @@ export default function Main() {
   const [int, setint] = useState();
   
 
-  const [result, setResult] = useState("vivek");
+  const [result, setResult] = useState("Web Developer");
   const [flag, setFlag] = useState(true);
   let handleSubmit = async (e) => {
-    console.log(rw);
+    // console.log(rw);
     e.preventDefault();
     try {
       let res = await fetch("http://localhost:8080/api/form", {
