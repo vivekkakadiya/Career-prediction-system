@@ -74,8 +74,11 @@ export default function Main() {
           19: int,
         }),
       });
-      // console.log(rw);
-      setResult(res);
+      const ans =await res.json()
+      //print response  
+      // console.log(res);
+      console.log(ans);
+      setResult(ans.mag);
       setFlag(false);
     } catch (err) {
       console.log(err.message);

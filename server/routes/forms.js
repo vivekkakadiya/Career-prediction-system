@@ -15,10 +15,12 @@ router.post("/", async (req, res) => {
     // console.log(values);
     const childpython=spawn('python',['careerPredictionModel.py',values]);
     console.log(data);
+    const ans=null;
     childpython.stdout.on('data',(data)=>{
         console.log(data.toString());
-        res.json(data.toString());
-});
+        ans=data.toString()
+    });
+    res.json({mag : "web "});
     
 })
 
