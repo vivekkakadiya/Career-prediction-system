@@ -4,7 +4,7 @@ const { spawn }=require("child_process");
 
 var data;
 
-router.post("/", async (req, res) => {
+router.post("/", (req, res) => {
     data = req.body;
     // console.log(data);
     // var obj=JSON.parse(data);
@@ -15,12 +15,14 @@ router.post("/", async (req, res) => {
     // console.log(values);
     const childpython=spawn('python',['careerPredictionModel.py',values]);
     console.log(data);
-    const ans=null;
-    childpython.stdout.on('data',(data)=>{
-        console.log(data.toString());
-        ans=data.toString()
+    let ans=null;
+    childpython.stdout.on('data',async (data)=>{
+        console.log(data.toString()+"hh");
+        ans=await data.toString();
+        console.log(ans);
+        res.json({mag : ans});
     });
-    res.json({mag : "web "});
+    
     
 })
 

@@ -58,6 +58,7 @@ rfc_accuracy = accuracy_score(y_test,rfc_y_pred)
 # print("accuracy=",rfc_accuracy*10)
 # print("confusion matrics=",rfc_cm)
 
+# print("hellllllllllo")
 
 # Taking user data
 data=sys.argv[1].split(",")
@@ -77,7 +78,6 @@ if(data[5]=='no'):
     test_data[0].append('0')
 else:
     test_data[0].append('1')        
-
 
 category_cols = df[['certifications', 'workshops', 'Interested subjects', 'interested career area ', 'Type of company want to settle in?', 
                     'Interested Type of Books']]
@@ -166,5 +166,6 @@ if data[18]=='no':
 else:
     test_data[0].append('1')        
 
+# print(test_data)
 ans=rf.predict(test_data)
 print(ans)        
