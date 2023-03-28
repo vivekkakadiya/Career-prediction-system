@@ -22,12 +22,12 @@ const User = mongoose.model("user", userSchema);
 
 const validate = (data) => {
   const schema = Joi.object({
-    firstName: Joi.string.required().label("First Name"),
+    firstName: Joi.string().required().label("First Name"),
     lastName: Joi.string().required().label("Last Name"),
-    email: Joi.string.required.label("Email"),
-    password: password.string.required().label("Password"),
-    gender: Joi.string.required().label("Gender"),
-    dateOfBirth: Joi.date.required().label("Date"),
+    email: Joi.string().required.label("Email"),
+    password: password.string().required().label("Password"),
+    // gender: Joi.string.required().label("Gender"),
+    // dateOfBirth: Joi.date.required().label("Date"),
   });
   return schema.validate(data);
 };
