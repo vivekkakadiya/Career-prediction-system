@@ -1,8 +1,14 @@
 // import career from '../Image/career.png'
+import { useEffect } from 'react'
 import career from '../Image/career.png'
 import './Home.css'
 
 export default function Home() {
+
+    useEffect(() => {
+        sessionStorage.removeItem("result")
+    }, [])
+
     return (
         <div className='main'>
             <div className="nav">

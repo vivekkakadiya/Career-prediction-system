@@ -4,7 +4,8 @@ import axios from "axios";
 import career from "../Image/career.png";
 // {result}
 export const Result = () => {
-  // const [result, setResult] = useState("Computer")
+  const [result, setResult] = useState(sessionStorage.getItem("result"));
+  
 
   const [login, setLogin] = useState(true);
   const [data, setData] = useState({ email: "", password: "" });
@@ -299,7 +300,7 @@ export const Result = () => {
             </div>
 
             <h1 className="homeName">Result</h1>
-            {/* <span className="tagline">{result}</span> */}
+            <span className="tagline">{result}</span>
           </div>
         </div>
       )}

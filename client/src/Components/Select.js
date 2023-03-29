@@ -1,6 +1,11 @@
+import { useEffect } from "react"
 import "./Select.css"
 
 export default function Select(){
+    
+    useEffect(() => {
+        sessionStorage.removeItem("result")
+    }, [])
     return(
         <div className="main"> 
             <div className="nav">

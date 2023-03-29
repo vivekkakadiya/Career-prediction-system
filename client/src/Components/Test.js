@@ -79,6 +79,8 @@ export default function Main() {
       // console.log(res);
       console.log(ans);
       setResult(ans.mag);
+      sessionStorage.setItem("result",ans.mag);
+
       setFlag(false);
     } catch (err) {
       console.log(err.message);
@@ -88,7 +90,7 @@ export default function Main() {
 
   return (
     <>
-   {flag ? <div className="main" style={{ height: "100vh" }}>
+   {!sessionStorage.getItem("result") ? <div className="main" style={{ height: "100vh" }}>
       <div className="nav">
         <div className="nav--upper">
           <a href="/">
@@ -481,7 +483,7 @@ export default function Main() {
           {/* </a> */}
         </form>
       </div>
-    </div> : <Result result={result} />}
+    </div> : <Result/>}
     </>
 
   );
