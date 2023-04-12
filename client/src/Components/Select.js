@@ -5,6 +5,7 @@ export default function Select(){
     
     useEffect(() => {
         sessionStorage.removeItem("result")
+        sessionStorage.removeItem("token")
     }, [])
     return(
         <div className="main"> 
